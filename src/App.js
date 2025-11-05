@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-// import Home from './pages/Home';
+import Home from './pages/Home';
 import CarDetails from './pages/CarDetails';
 // import About from './pages/About';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-// import Favorites from './pages/Favorites';
+import Favorites from './pages/Favorites';
 import AdminDashboard from './pages/AdminDashboard';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -21,12 +21,12 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/car/:id" element={<CarDetails />} />
         <Route path="/admin" element={<AdminDashboard />} />
-
-          {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} /> 
+        <Route path="/favorites" element={<Favorites />} />
           
           {/* // <Route path="/about" element={<About />} />
      
-          // <Route path="/favorites" element={<Favorites />} />
+          // 
           //  */}
         </Routes>
       </Router>
